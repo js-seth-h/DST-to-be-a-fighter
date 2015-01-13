@@ -26,8 +26,7 @@ Shows exactly how much health was lost/gained upon healing or being hit.
 
 === Gameplay Controls === 
 
-Widget Key (Default "C") show widget that controls options. 
-Supported only in DST, Not DS/RoG 
+Widget Key (Default "C") show widget that controls options.  
 
 4 buttons are provided. 
 
@@ -57,7 +56,7 @@ The other options are trivial.
 Changes History 
 ---------------------
 1.4
-  Support Widget in DS/RoG
+  Widget is Supported in DS/RoG
 
 1.0 ~ 1.3
   Add Life Giving Amulet functionality
