@@ -37,7 +37,12 @@ function PrefabLibrary:Get(item, data)
   if self.stats[prefab] == nil then
   	local realMaster =  TheWorld.ismastersim
   	TheWorld.ismastersim = true
-  	local proto = SpawnPrefab(prefab)
+
+    local _assert = assert
+    assert = function (a,b,c) end
+    local proto = SpawnPrefab(prefab)
+    assert = _assert 
+
   	self.stats[prefab] = self.fn(proto, data)
   	proto:Remove()
   	TheWorld.ismastersim = realMaster
