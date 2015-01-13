@@ -79,12 +79,12 @@ function SimPostInit(player)
 	print("SimPostInit")
 	if IsDST() then
 		_G.TheWorld:ListenForEvent("playeractivated", OnActivated)
+
 	else 
 		-- local TheWorld = _G.TheWorld and _G.TheWorld or _G.GetWorld()
 		SetTheWorld()
 		SetThePlayer(player)
-		OnActivated(player)
-
+		OnActivated(player) 
 	end
 
 end
@@ -105,16 +105,15 @@ table.insert(_G.TEST_FN, fn)
 end 
 
 
+local function IsDefaultScreen()
+	return GLOBAL.TheFrontEnd:GetActiveScreen().name:find("HUD") ~= nil
+end
 
-function AddController(controls)
-
-	local function IsDefaultScreen()
-		return GLOBAL.TheFrontEnd:GetActiveScreen().name:find("HUD") ~= nil
-	end
+local function AddWidget(parent)
 
 	local ControlWidget = _G.require "widgets/fightersense"
 
-	local widget = controls:AddChild(ControlWidget())   
+	local widget = parent:AddChild(ControlWidget())   
 	widget:Hide()
 
 	-- local keydown = false
@@ -126,10 +125,30 @@ function AddController(controls)
 		if not IsDefaultScreen() then return end 
 		widget:Hide()
 		end)
+end
+
+function AddController(controls)
+	AddWidget(controls)
 
 
 end 
 
 if IsDST() then
 	AddClassPostConstruct( "widgets/controls", AddController )
+else 
+	Assets = {
+		Asset("ATLAS", "images/avatars.xml"),
+		Asset("IMAGE", "images/avatars.tex"),
+	}
+
+
+	AddSimPostInit(function()
+
+		local ControlWidget = _G.require "widgets/fightersense" 		
+		local controls = _G.GetPlayer().HUD
+		AddWidget(controls)
+
+
+		end)
+
 end

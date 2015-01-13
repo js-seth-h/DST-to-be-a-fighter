@@ -121,7 +121,7 @@ function Inst:inventoryitem_PercentUsed()
     if self.inst.components.armor ~= nil then return self.inst.components.armor:GetPercent() end
     if self.inst.components.finiteuses ~= nil then return self.inst.components.finiteuses:GetPercent() end
     if self.inst.components.fueled ~= nil then return self.inst.components.fueled:GetPercent() end
-    -- other case... I don't know how to handle..
+    return 100  -- 사용횟수가 제한이 없다면 항상 100%
   else
     return self.inst.replica.inventoryitem.classified.percentused:value()
   end  

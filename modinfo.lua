@@ -1,25 +1,30 @@
 name = "To Be A Fighter"
 description = [===[
+             To Be A Fighter - ver 1.3
+================================================================
+
+
 As a Fighter, Character have to be prepare battle.
 
-----------------------------------------
+Good Features
+------------------------------
 
-    Good Features
-======================
-
- = Combat Instinct =
+=== Combat Instinct ===
 
 When attack, automatically put on weapon, helmet and armor.
 
- = Defensive Instinct = 
+=== Defensive Instinct ===
 
 When attacked or hostile closely approached, automatically put on armor and helmet
 
- = Damage indicators =
+(DS/RoG only) put on 'Live Giving Amulet' automatically, if you expected to die by combat and have amulet.
+
+
+=== Damage indicators ===
 
 Show Damage and Heal HP.
 
- = Control in Gameplay = 
+=== Control in Gameplay ===
 
 Widget Key (Default "C") show widget that control options.
 Support only in DST, Not DS/ROG
@@ -32,8 +37,9 @@ Support only in DST, Not DS/ROG
   Button 3. In Combat Instinct if projectile weapon equipped, Toggle Change weapon or not 
 
 
-  Mod Config Explain 
-======================
+
+Mod Config Explain 
+------------------------------
  
 * Combat Instinct
   Set Default Toggle state of Widget Button 1
@@ -51,7 +57,7 @@ The Others Options is trivial.
 
 
 author = "js.seth.h"
-version = "1.2"
+version = "1.3"
 
 forumthread = ""
 

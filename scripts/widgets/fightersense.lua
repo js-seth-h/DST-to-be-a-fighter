@@ -7,6 +7,8 @@ W = nil -- global var for helping develop widget
 local FighterSenseWheel = Class(Widget, function(self)
   Widget._ctor(self, "FighterSenseWheel") 
 
+  -- return;
+
   self.root = self:AddChild(BadgeWheel())
   W = self.root
   self.root:CreateBadges(4) 
