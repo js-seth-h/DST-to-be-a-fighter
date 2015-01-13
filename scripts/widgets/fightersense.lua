@@ -3,14 +3,14 @@ local BadgeWheel = require("util.badgewheel")
 local CountDown = require("util.countdown") 
 
 -- CHORES = {"LUMBERJACK", "LUMBERJACK" }
-W = nil -- global var for helping develop widget
+FW = nil -- global var for helping develop widget
 local FighterSenseWheel = Class(Widget, function(self)
   Widget._ctor(self, "FighterSenseWheel") 
 
   -- return;
 
   self.root = self:AddChild(BadgeWheel())
-  W = self.root
+  FW = self.root
   self.root:CreateBadges(4) 
   --[[
   주요 설정 
@@ -300,7 +300,7 @@ function FighterSenseWheel:BtnClose()
 end
 
 function FighterSenseWheel:OnUpdate(dt) 
-  print("onUpdate", dt)
+  -- print("onUpdate", dt)
 end
 
 

@@ -71,7 +71,7 @@ function Inst:inventory_GetEquippedItem(slot)
     return self.inst.replica.inventory:GetEquippedItem(slot)  
   end 
 end
-function Inst:inventory_GetAllItem() 
+function Inst:inventory_GetAllItems() 
   local items = {}
   for k,v in pairs(self:inventory_GetItems()) do table.insert(items, v) end 
   for k,v in pairs(self:inventory_GetEquips()) do table.insert(items, v) end  

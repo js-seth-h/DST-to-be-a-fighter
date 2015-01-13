@@ -125,30 +125,21 @@ local function AddWidget(parent)
 		if not IsDefaultScreen() then return end 
 		widget:Hide()
 		end)
-end
-
-function AddController(controls)
-	AddWidget(controls)
-
-
 end 
 
 if IsDST() then
-	AddClassPostConstruct( "widgets/controls", AddController )
+	AddClassPostConstruct( "widgets/controls", function (controls)
+		AddWidget(controls)
+		end  )
 else 
 	Assets = {
 		Asset("ATLAS", "images/avatars.xml"),
 		Asset("IMAGE", "images/avatars.tex"),
 	}
 
-
 	AddSimPostInit(function()
-
-		local ControlWidget = _G.require "widgets/fightersense" 		
-		local controls = _G.GetPlayer().HUD
+		local controls = _G.ThePlayer.HUD
 		AddWidget(controls)
-
-
 		end)
 
 end

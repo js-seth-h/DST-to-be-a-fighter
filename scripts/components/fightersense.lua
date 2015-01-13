@@ -259,7 +259,7 @@ function FighterSense:IsThreat(ent)
 end
 function FighterSense:ExpectedDamage(damage) 
  local INST = Inst(self.inst)
- local items = INST:inventory_GetAllItem()
+ local items = INST:inventory_GetAllItems()
   -- dump("inven", items) 
   items = self:FilteredItems(items, _equippable)
   -- dump("_equippable", items) 
@@ -326,7 +326,7 @@ end
 
 function FighterSense:DoAutoEquip(hand, head, armor) 
 
-  local items = Inst(self.inst):inventory_GetAllItem() 
+  local items = Inst(self.inst):inventory_GetAllItems() 
   items = self:FilteredItems(items, _equippable)
   items = self:FindStat(items)
 
