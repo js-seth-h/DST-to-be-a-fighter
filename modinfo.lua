@@ -1,6 +1,6 @@
 name = "To Be A Fighter"
 description = [===[
-             To Be A Fighter - ver 1.4
+             To Be A Fighter - ver 1.5
 ================================================================
 
 As a Fighter, Characters have to be prepared for battle. 
@@ -55,6 +55,9 @@ The other options are trivial.
 
 Changes History 
 ---------------------
+1.5
+  fix butterfly crash
+
 1.4
   Widget is Supported in DS/RoG
 
@@ -71,7 +74,7 @@ Changes History
 
 
 author = "js.seth.h"
-version = "1.4"
+version = "1.5"
 
 forumthread = ""
 
